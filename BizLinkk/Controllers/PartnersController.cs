@@ -13,6 +13,8 @@ namespace BizLinkk.Controllers
         {
             _context = context;
         }
+
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             // Get the total number of records
@@ -20,7 +22,26 @@ namespace BizLinkk.Controllers
             return View(partners);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Create()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Name, RegistrationNo, VatRegNo, Rcoc, Rcoe")] Partner partner)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(partner);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View(partner);
+        }
+
+        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
             var partner = await _context.Partners.FirstOrDefaultAsync(x => x.PartnerId == id);

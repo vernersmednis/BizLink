@@ -1,0 +1,48 @@
+﻿@model BizLinkk.Models.Partner
+
+@{
+    ViewData["Title"] = "Create Partner";
+}
+
+<h2>Create Partner</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RegistrationNo" class="control-label"></label>
+        <input asp-for="RegistrationNo" class="form-control" />
+        <span asp-validation-for="RegistrationNo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VatRegNo" class="control-label"></label>
+        <input asp-for="VatRegNo" class="form-control" />
+        <span asp-validation-for="VatRegNo" class="text-danger"></span>
+    </div>
+
+    <!-- Editable Rcoc Field -->
+    <div class="form-group">
+        <label asp-for="Rcoc" class="control-label"></label>
+        <input asp-for="Rcoc" class="form-control" />
+        <span asp-validation-for="Rcoc" class="text-danger"></span>
+    </div>
+
+    <!-- Editable Rcoe Field -->
+    <div class="form-group">
+        <label asp-for="Rcoe" class="control-label"></label>
+        <input asp-for="Rcoe" class="form-control" />
+        <span asp-validation-for="Rcoe" class="text-danger"></span>
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
