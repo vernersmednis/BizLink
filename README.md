@@ -1,0 +1,2 @@
+# BizLink (work in progress)
+This web application is developed using Visual Studio and C#. It connects to an MS SQL database to display, edit, and save records from the "Partners" table in the "Prakse" database. It is still work in progress.
