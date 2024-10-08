@@ -1,0 +1,44 @@
+﻿@model List<BizLinkk.Models.Partner>
+@{
+    ViewData["Title"] = "Partners";
+}
+
+<div class="container">
+    <h1 class="display-4">Partners</h1>
+
+    <!-- Table for listing partners -->
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nosaukums</th>
+                    <th>Registration No</th>
+                    <th>Vat Reg.No</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var partner in Model)
+                {
+                    <tr>
+                        <td>@partner.Name</td>
+                        <td>@partner.RegistrationNo</td>
+                        <td>@partner.VatRegNo</td>
+                        <td>
+                            <!-- Edit button redirects to Partners/Edit/id -->
+                            <a asp-action="Edit" asp-route-id="@partner.PartnerId" class="btn btn-secondary">Edit</a>
+
+                            <!-- Delete button redirects to Partners/Delete/id -->
+                            <a asp-action="Delete" asp-route-id="@partner.PartnerId" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add button redirects to Partners/Create -->
+    <div class="mb-3">
+        <a asp-action="Create" class="btn btn-primary">Add</a>
+    </div>
+</div>

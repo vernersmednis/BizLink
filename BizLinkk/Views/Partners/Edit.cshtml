@@ -1,0 +1,70 @@
+﻿@model BizLinkk.Models.Partner
+
+@{
+    ViewData["Title"] = "Edit Partner";
+}
+
+<h2>Edit Partner</h2>
+
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="PartnerId" />
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RegistrationNo" class="control-label"></label>
+        <input asp-for="RegistrationNo" class="form-control" />
+        <span asp-validation-for="RegistrationNo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="VatRegNo" class="control-label"></label>
+        <input asp-for="VatRegNo" class="form-control" />
+        <span asp-validation-for="VatRegNo" class="text-danger"></span>
+    </div>
+
+    <!-- Editable Rcoc Field -->
+    <div class="form-group">
+        <label asp-for="Rcoc" class="control-label"></label>
+        <input asp-for="Rcoc" class="form-control" />
+        <span asp-validation-for="Rcoc" class="text-danger"></span>
+    </div>
+
+    <!-- Editable Rcoe Field -->
+    <div class="form-group">
+        <label asp-for="Rcoe" class="control-label"></label>
+        <input asp-for="Rcoe" class="form-control" />
+        <span asp-validation-for="Rcoe" class="text-danger"></span>
+    </div>
+
+    <input type="hidden" asp-for="Rctc" />
+
+    <input type="hidden" asp-for="Rcte" />
+
+    <br />
+
+    <!-- Read-only fields for Rctc and Rcte -->
+    <table class="table table-bordered">
+        <tbody>
+            <tr>
+                <th class="text-right">Rctc:</th>
+                <td>@Model.Rctc</td>
+            </tr>
+            <tr>
+                <th class="text-right">Rcte:</th>
+                <td>@Model.Rcte</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
