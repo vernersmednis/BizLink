@@ -18,9 +18,12 @@ public partial class PrakseContext : DbContext
 
     public virtual DbSet<Partner> Partners { get; set; }
 
+    /*
+     * Use this method if you want to use a connection besides DefaultConnection mentioned in Program.cs.
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=demo.ozols.lv;Database=Prakse;User Id=Praktikants;Password=Praks@sUzd@vum$;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("DefaultConnection");
+    */
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

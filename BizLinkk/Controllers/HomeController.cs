@@ -15,7 +15,8 @@ namespace BizLinkk.Controllers
 
 		public IActionResult Index()
 		{
-			return View();
+			// Redirect to the Index action of the PartnersController
+			return RedirectToAction("Index", "Partners");
 		}
 
 		public IActionResult Privacy()
