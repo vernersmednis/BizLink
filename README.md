@@ -11,5 +11,5 @@ This web application is developed using Visual Studio and C#. It connects to an 
  # Installation Instructions
   - Open Visual Studio and press "Continue without code"
   - Go to File > Clone Repository 
-  - In the “Clone a Repository” window, provide the URL of your GitHub repository and choose a new local folder where you'd like to clone the project.
-  -  Click Clone. Visual Studio will pull the entire project from GitHub to this folder.
+  - In the “Clone a Repository” window, provide the URL of this GitHub repository (https://github.com/vernersmednis/BizLink.git) and choose a new local folder where you'd like to clone the project.
+  - Click Clone. Visual Studio will pull the entire project from GitHub to that folder.
