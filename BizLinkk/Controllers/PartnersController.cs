@@ -60,5 +60,25 @@ namespace BizLinkk.Controllers
             }
             return View(partner);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var partner = await _context.Partners.FirstOrDefaultAsync(x => x.PartnerId == id);
+            return View(partner);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var item = await _context.Partners.FindAsync(id);
+            if (item != null)
+            {
+                _context.Partners.Remove(item);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
