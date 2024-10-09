@@ -8,6 +8,10 @@ This web application is developed using Visual Studio and C#. It connects to an 
  - Save Changes: Save edits back to the database.
  - User-Friendly Interface: Optionally, both the list and editing features can be presented in a single view for enhanced usability.
 
+ # Prereqs
+  - The .NET SDK I had installed was (dotnet-sdk-8.0.402-win-x64.exe)[https://dotnet.microsoft.com/en-us/download/dotnet/8.0] (Now seems to be replaced by Oct 8 version SDK 8.0.403).
+  - If you have a need to repair the installation, when rerunning the installer pressing "repair" didn't help. I had to press "uninstall", then rerun again and press "install" again.
+
  # Installation Instructions
   - Open Visual Studio and press "Continue without code"
   - Go to File > Clone Repository 
