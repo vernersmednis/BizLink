@@ -6,7 +6,7 @@ This web application is developed using Visual Studio and C#. It connects to an 
  - Display Records: View all entries from the "Partners" table.
  - Edit Records: Modify existing entries directly within the application.
  - Save Changes: Save edits back to the database.
- - User-Friendly Interface: Optionally, both the list and editing features can be presented in a single view for enhanced usability.
+ - Delete a record: Remove a record from the database.
 
  # Prereqs
   - The .NET SDK I had installed was (dotnet-sdk-8.0.402-win-x64.exe)[https://dotnet.microsoft.com/en-us/download/dotnet/8.0] (Now seems to be replaced by Oct 8 version SDK 8.0.403).
